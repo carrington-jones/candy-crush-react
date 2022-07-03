@@ -32,8 +32,15 @@ const App= () => {
     console.log(currentColorArrangement);
 
   return (
-      <div>
-
+      <div className="app">
+        <div className="game">
+            {currentColorArrangement.map((candyColor, index) => ( //maps through current color arrangement set on line 25 and then assigns it based on color.
+                <img
+                    key={index}
+                    style={{backgroundColor: candyColor}}
+                />
+                ))}
+        </div>
       </div>
   )
 }
